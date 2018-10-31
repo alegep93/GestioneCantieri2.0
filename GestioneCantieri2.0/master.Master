@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="GestioneCantieri2._0.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Gestione Cantieri 2.0</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- LINK -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="Css/style.css" rel="stylesheet" />
+
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Gestione Cantieri 2.0</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="DDT-Mef.aspx">DDT Mef</a></li>
+                <li class="nav-item"><a class="nav-link" href="DDT-Fornitori.aspx">DDT Fornitori</a></li>
+                <li class="nav-item"><a class="nav-link" href="Listino.aspx">Listino</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gestione Gruppi e Frutti<span class="caret"></span></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="GestisciFrutti.aspx">Gestisci Frutti</a>
+                        <a class="dropdown-item" href="GestisciGruppiFrutti.aspx">Gestisci Gruppi Frutti</a>
+                        <a class="dropdown-item" href="ControlloGruppi.aspx">Controllo Gruppi</a>
+                        <a class="dropdown-item" href="OrdineFrutti.aspx">Ordine Frutti</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stampa Gruppi e Frutti<span class="caret"></span></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="StampaFruttiGruppi.aspx">Stampa Frutti Gruppi</a>
+                        <a class="dropdown-item" href="StampaOrdFrutLocale.aspx">Stampa Ord Frut Loc</a>
+                        <a class="dropdown-item" href="StampaOrdFrutCantExcel.aspx">Stampa Ord Frut Cant Excel</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="GestioneLocali.aspx">Gestione Locali</a></li>
+                <li class="nav-item"><a class="nav-link" href="InserimentoDati.aspx">Inserimento Dati</a></li>
+                <li class="nav-item"><a class="nav-link" href="GestioneCantieri.aspx">Gestione Cantieri</a></li>
+                <li class="nav-item"><a class="nav-link" href="GestionePagamenti.aspx">Gestione Pagamenti</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stampe Varie<span class="caret"></span></a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="StampeVarie.aspx">Stampe DDT</a>
+                        <a class="dropdown-item" href="ResocontoOperaio.aspx">Resoconto Operaio</a>
+                        <a class="dropdown-item" href="RicalcoloConti.aspx">Ricalcolo Conti</a>
+                        <a class="dropdown-item" href="StampaVerificaCantiere.aspx">Stampa Verifica Cantiere</a>
+                        <a class="dropdown-item" href="StampaValoriCantieri.aspx">Stampa Valori Cantieri</a>
+                        <a class="dropdown-item" href="StampaValoriCantieriConOpzioni.aspx">Stampa Valori Cantieri Con Opzioni</a>
+                        <a class="dropdown-item" href="StampaPerTipologia.aspx">Stampa Per Tipologia</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <form id="frmGestioneCantieri" runat="server">
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
